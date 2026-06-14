@@ -9,7 +9,7 @@ description: >-
 canonical_url: "https://governance.ai-mvp.com/2026/06/19/trusting-the-skills-you-didnt-write/"
 ---
 
-*The first two posts assumed you wrote the software. You didn't. The brain is a foundation model you didn't train; the skills come from a marketplace anyone can publish to. The ecosystem is your moat and your largest attack surface, at the same time.*
+*The first two posts assumed you wrote the software. You didn't. The brain is a foundation model you didn't train; the skills come from a marketplace anyone can publish to. The ecosystem is your strongest advantage and your largest attack surface, at the same time.*
 
 > Series: The Engineering of AI Governance, Post 8
 > Continues from [Proof of Outcome](https://governance.ai-mvp.com/2026/06/14/proof-of-outcome/) and [Trust at Fleet Scale](https://governance.ai-mvp.com/2026/06/17/trust-at-fleet-scale/). Final post of the trust trilogy.

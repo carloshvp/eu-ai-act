@@ -18,7 +18,7 @@ canonical_url: "https://governance.ai-mvp.com/2026/06/11/the-cloud-can-prove-it-
 
 > Series: The Engineering of AI Governance, Post 5
 > Continues from [Software Promises, Hardware Proofs](https://governance.ai-mvp.com/2026/06/08/software-promises-hardware-proofs/) and [Ten Thousand Safe Motions](https://governance.ai-mvp.com/2026/06/06/ten-thousand-safe-motions/)
-> Strategic companion (robotics.ai-mvp.com): [Trust Becomes the Next Moat in the Humanoid Race](https://robotics.ai-mvp.com/notes/010-the-trust-stack/), the same problem framed for operators and investors.
+> Strategic companion (robotics.ai-mvp.com): [The Trust Stack](https://robotics.ai-mvp.com/notes/010-the-trust-stack/), the same problem framed for operators and investors.
 
 ---
 
