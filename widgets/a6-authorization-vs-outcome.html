@@ -55,9 +55,9 @@
 <script>
 (function(){
   var S={
-    nominal:{steps:['reached target','grasped — 18 N grip','placed — object released'],fault:null,warn:null},
-    slip:{steps:['reached target','grasped — 6 N under-grip','place attempted — object dropped'],fault:'object dropped during place',warn:null},
-    human:{steps:['reached target','human entered — controller STOP','motion halted — object held safe'],fault:null,warn:'task not completed — protective stop'}
+    nominal:{steps:['reached target','grasped, 18 N grip','placed, object released'],fault:null,warn:null},
+    slip:{steps:['reached target','grasped, 6 N under-grip','place attempted, object dropped'],fault:'object dropped during place',warn:null},
+    human:{steps:['reached target','human entered, controller STOP','motion halted, object held safe'],fault:null,warn:'task not completed, protective stop'}
   };
   var cur='nominal',att=true;
   var out=document.getElementById('out'),verdict=document.getElementById('verdict');
@@ -66,17 +66,17 @@
   function render(){
     var s=S[cur];clear(out);
     if(!att){
-      ['— not recorded —','— not recorded —','— not recorded —'].forEach(function(t){out.appendChild(step(t,'muted'));});
+      ['- not recorded -','- not recorded -','- not recorded -'].forEach(function(t){out.appendChild(step(t,'muted'));});
       out.appendChild(step('trusting the log','muted'));
       verdict.className='verdict ok';
-      verdict.textContent='Reported: task complete. With only the authorization log, the failure (if any) is invisible — the audit cannot see it.';
+      verdict.textContent='Reported: task complete. With only the authorization log, the failure (if any) is invisible, the audit cannot see it.';
       return;
     }
     s.steps.forEach(function(t){out.appendChild(step(t));});
     out.appendChild(step('outcome sealed + signed','bold'));
-    if(s.fault){verdict.className='verdict bad';verdict.textContent='AUTHORIZED ≠ HAPPENED — '+s.fault+'. The log said allow; the sensors say otherwise.';}
+    if(s.fault){verdict.className='verdict bad';verdict.textContent='AUTHORIZED ≠ HAPPENED, '+s.fault+'. The log said allow; the sensors say otherwise.';}
     else if(s.warn){verdict.className='verdict warn';verdict.textContent='Authorized, and the outcome is confirmed: '+s.warn+'. The audit shows a safe stop, not a silent success.';}
-    else{verdict.className='verdict ok';verdict.textContent='Authorized and confirmed by sensor evidence — a clean run you can actually prove.';}
+    else{verdict.className='verdict ok';verdict.textContent='Authorized and confirmed by sensor evidence, a clean run you can actually prove.';}
   }
   document.querySelectorAll('button[data-s]').forEach(function(b){b.addEventListener('click',function(){cur=this.dataset.s;document.querySelectorAll('button[data-s]').forEach(function(x){x.classList.remove('on');});this.classList.add('on');render();});});
   document.getElementById('att').addEventListener('click',function(){att=!att;this.textContent='Outcome attestation: '+(att?'on':'off');this.classList.toggle('on',!att);render();});

@@ -27,7 +27,7 @@
   <p class="sub">Drag to scrub a 5-second pick. Every reading is signed and bound to the controller's single-use state token.</p>
   <input type="range" min="0" max="100" value="20" step="1" id="scrub" class="scrub">
   <div class="timelbl"><span>0.0 s</span><span id="now">1.0 s</span><span>5.0 s</span></div>
-  <div id="banner" class="banner">approach phase — moving toward target</div>
+  <div id="banner" class="banner">approach phase, moving toward target</div>
   <div class="grid">
     <div class="card"><div class="k">end-effector height</div><div class="v"><span id="pos">0.19</span> <small>m</small></div></div>
     <div class="card"><div class="k">drive torque</div><div class="v"><span id="trq">9</span> <small>N·m</small></div></div>
@@ -57,8 +57,8 @@
     var stopped=p>=EVT;
     document.getElementById('tok').textContent='#4471 · '+(stopped?'STOP':'MOVE');
     var b=document.getElementById('banner');
-    if(stopped){b.className='banner stop';b.textContent='human entered safeguarded zone at 2.3 s — controller forced a protective stop';}
-    else{b.className='banner';b.textContent=p<30?'approach phase — moving toward target':'grasp + transport — object held under load';}
+    if(stopped){b.className='banner stop';b.textContent='human entered safeguarded zone at 2.3 s, controller forced a protective stop';}
+    else{b.className='banner';b.textContent=p<30?'approach phase, moving toward target':'grasp + transport, object held under load';}
     var x=p/100*660,y=100-torque(p)/16*94;
     var dot=document.getElementById('dot');dot.setAttribute('cx',x.toFixed(1));dot.setAttribute('cy',y.toFixed(1));
     document.getElementById('sig').textContent='frame signed ✓   ·   bound to token #4471 ('+(stopped?'STOP':'MOVE')+')';

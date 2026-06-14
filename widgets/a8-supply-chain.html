@@ -35,7 +35,7 @@
 .sc .warn{background:var(--amberbg);color:var(--amber);}
 </style>
 <div class="sc">
-  <h3>A robot's behaviour is a stack of artifacts — each from a different author</h3>
+  <h3>A robot's behaviour is a stack of artifacts, each from a different author</h3>
   <p class="sub">Every link is a trust decision. Click one to inspect where its trust comes from.</p>
   <div class="chips" id="chips"></div>
   <div class="toggle">require signed provenance
@@ -47,11 +47,11 @@
 <script>
 (function(){
   var nodes=[
-    {id:'groot',name:'GR00T foundation model',author:'NVIDIA',prov:'SLSA L3',signed:true,scope:'reasoning · perception',note:'pinned version; not auditable line-by-line — trusted via provenance and identity, not inspection'},
+    {id:'groot',name:'GR00T foundation model',author:'NVIDIA',prov:'SLSA L3',signed:true,scope:'reasoning · perception',note:'pinned version; not auditable line-by-line, trusted via provenance and identity, not inspection'},
     {id:'ft',name:'domestic-manipulation fine-tune v4',author:'builder, first-party',prov:'SLSA L2',signed:true,scope:'manipulation policy',note:'derived from the foundation model; provenance chains back to it'},
     {id:'k',name:'kitchen-tidy skill',author:'builder, first-party',prov:'reviewed',signed:true,scope:'arm + gripper, kitchen zone',note:'in-house skill; reviewed and signed'},
-    {id:'b',name:'barista-latte skill',author:'ThirdPartyCo, marketplace',prov:'SLSA L1',signed:true,scope:'arm + gripper, counter zone',note:'third-party but signed and scoped — admitted with bounded capability'},
-    {id:'p',name:'promo-dance skill',author:'unknown',prov:'none',signed:false,scope:'undeclared',note:'no signature, no provenance — unaccountable'}
+    {id:'b',name:'barista-latte skill',author:'ThirdPartyCo, marketplace',prov:'SLSA L1',signed:true,scope:'arm + gripper, counter zone',note:'third-party but signed and scoped, admitted with bounded capability'},
+    {id:'p',name:'promo-dance skill',author:'unknown',prov:'none',signed:false,scope:'undeclared',note:'no signature, no provenance, unaccountable'}
   ];
   var sel='groot',requireSigned=true;
   var chips=document.getElementById('chips'),detail=document.getElementById('detail');
@@ -83,9 +83,9 @@
     detail.appendChild(row('signed manifest',n.signed?'yes':'no'));
     detail.appendChild(row('declared scope',n.scope));
     var st=status(n),v=mk('div','verdict '+(st==='ok'?'ok':st==='blocked'?'bad':'warn'));
-    if(st==='ok')v.textContent='admitted — '+n.note;
-    else if(st==='blocked')v.textContent='blocked — '+n.note+'. With signed provenance required, an unaccountable artifact cannot run.';
-    else v.textContent='admitted at risk — '+n.note+'. Provenance is not being required, so this runs unverified.';
+    if(st==='ok')v.textContent='admitted, '+n.note;
+    else if(st==='blocked')v.textContent='blocked, '+n.note+'. With signed provenance required, an unaccountable artifact cannot run.';
+    else v.textContent='admitted at risk, '+n.note+'. Provenance is not being required, so this runs unverified.';
     detail.appendChild(v);
   }
   document.getElementById('tg').addEventListener('click',function(){

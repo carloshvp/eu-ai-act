@@ -34,7 +34,7 @@
 .rv .log div{padding:1px 0;}
 </style>
 <div class="rv">
-  <h3>Reviewed, signed, shipped — and revocable in one motion</h3>
+  <h3>Reviewed, signed, shipped, and revocable in one motion</h3>
   <p class="sub">Run the marketplace review, publish to the fleet, then report misbehaviour and watch the skill get pulled everywhere.</p>
   <div class="card">
     <div class="top">
@@ -71,17 +71,17 @@
     if(busy)return;busy=true;clearChecks();setBadge('in review','review');bReview.disabled=true;
     var i=0;
     (function next(){
-      if(i>=lis.length){busy=false;setBadge('approved','review');bPub.disabled=false;logLine('REVIEW   approved — attestation record signed and issued');return;}
+      if(i>=lis.length){busy=false;setBadge('approved','review');bPub.disabled=false;logLine('REVIEW   approved, attestation record signed and issued');return;}
       lis[i].li.classList.add('done');lis[i].mark.textContent='✓';i++;setTimeout(next,360);
     })();
   });
   bPub.addEventListener('click',function(){
     setBadge('published','published');bPub.disabled=true;bRev.disabled=false;
-    logLine('PUBLISH  barista-latte v1.2 rolled out to fleet (staged) — 48 units');
+    logLine('PUBLISH  barista-latte v1.2 rolled out to fleet (staged), 48 units');
   });
   bRev.addEventListener('click',function(){
     setBadge('revoked','revoked');bRev.disabled=true;
-    logLine('REVOKE   misbehaviour reported — skill pulled fleet-wide, attestation invalidated in 84 ms');
+    logLine('REVOKE   misbehaviour reported, skill pulled fleet-wide, attestation invalidated in 84 ms');
   });
   document.getElementById('reset').addEventListener('click',function(){
     busy=false;clearChecks();setBadge('unreviewed','');bReview.disabled=false;bPub.disabled=true;bRev.disabled=true;

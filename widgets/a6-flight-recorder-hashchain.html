@@ -27,7 +27,7 @@
 </style>
 <div class="fr">
   <h3>Tamper-evident flight recorder</h3>
-  <p class="sub">Each record's hash seals the one before it. Edit any field — the chain breaks from there down, and the anchored root stops matching.</p>
+  <p class="sub">Each record's hash seals the one before it. Edit any field, the chain breaks from there down, and the anchored root stops matching.</p>
   <div id="chain"></div>
   <div id="verdict" class="verdict ok"></div>
   <p class="anchor" id="anchor"></p>
@@ -35,7 +35,7 @@
 </div>
 <script>
 (function(){
-  var orig=['approach authorized — agent A, token #4471','grasp executed — gripper force 18 N','human entered zone — controller STOP','motion halted — end-effector frozen at 0.44 m','outcome sealed — object not released'];
+  var orig=['approach authorized, agent A, token #4471','grasp executed, gripper force 18 N','human entered zone, controller STOP','motion halted, end-effector frozen at 0.44 m','outcome sealed, object not released'];
   function hash(s){var h=2166136261>>>0;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)>>>0;}return('00000000'+h.toString(16)).slice(-8);}
   function compute(vals){var prev='00000000',hs=[];for(var i=0;i<vals.length;i++){var h=hash(prev+'|'+vals[i]);hs.push(h);prev=h;}return hs;}
   function mk(tag,cls){var e=document.createElement(tag);if(cls)e.className=cls;return e;}
@@ -64,7 +64,7 @@
     }
     var v=document.getElementById('verdict');
     if(first<0){v.className='verdict ok';v.textContent='All '+cur.length+' records verify against the anchored root. Nothing has been altered.';}
-    else{v.className='verdict bad';v.textContent='Tampering detected — earliest altered record: '+(first+1)+'. Every record after it is invalidated too.';}
+    else{v.className='verdict bad';v.textContent='Tampering detected, earliest altered record: '+(first+1)+'. Every record after it is invalidated too.';}
     var curRoot=cur[cur.length-1],a=document.getElementById('anchor');clear(a);
     a.appendChild(document.createTextNode('anchored root (held off-device): '));
     var s1=mk('span','mono'),b1=mk('b');b1.textContent=sealedRoot;s1.appendChild(b1);a.appendChild(s1);

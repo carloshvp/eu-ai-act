@@ -44,11 +44,11 @@
 <script>
 (function(){
   var steps=[
-    {t:'Factory root of trust',d:'On the manufacturing line, a unique key pair is provisioned into the secure element and one-time fuses are burned. The private key never leaves the hardware.',a:'device key pair — bound to this physical unit'},
-    {t:'Secure boot, measured',d:'On power-up the on-die BootROM authenticates each boot stage and records measurements, so the running software state is provable later.',a:'boot measurement — a fingerprint of exactly what booted'},
-    {t:'Device attestation (onboarding)',d:'Before it may join, the unit proves what it is to the onboarding service (FDO / BRSKI-style) — genuine hardware in an expected state, not a claim on a form.',a:'attestation report — genuine hardware, expected boot state'},
-    {t:'Fleet enrolment',d:'Only now is a workload identity issued and bound to the device key, so every later action and evidence record traces back to this specific robot.',a:'fleet identity (SPIFFE ID) — bound to the device key'},
-    {t:'First signed release',d:'The approved skill bundle is delivered and verified against its signed manifest. The robot is ready to operate — and accountable from its first motion.',a:'signed release manifest — ready to operate'}
+    {t:'Factory root of trust',d:'On the manufacturing line, a unique key pair is provisioned into the secure element and one-time fuses are burned. The private key never leaves the hardware.',a:'device key pair, bound to this physical unit'},
+    {t:'Secure boot, measured',d:'On power-up the on-die BootROM authenticates each boot stage and records measurements, so the running software state is provable later.',a:'boot measurement, a fingerprint of exactly what booted'},
+    {t:'Device attestation (onboarding)',d:'Before it may join, the unit proves what it is to the onboarding service (FDO / BRSKI-style), genuine hardware in an expected state, not a claim on a form.',a:'attestation report, genuine hardware, expected boot state'},
+    {t:'Fleet enrolment',d:'Only now is a workload identity issued and bound to the device key, so every later action and evidence record traces back to this specific robot.',a:'fleet identity (SPIFFE ID), bound to the device key'},
+    {t:'First signed release',d:'The approved skill bundle is delivered and verified against its signed manifest. The robot is ready to operate, and accountable from its first motion.',a:'signed release manifest, ready to operate'}
   ];
   var i=0;
   var dots=document.getElementById('dots');

@@ -27,11 +27,11 @@
 </style>
 <div class="fl">
   <h3>Revocation is a latency number, not a hope</h3>
-  <p class="sub">Click robots to mark them compromised, then revoke. Watch how fast it propagates fleet-wide — and that it leaves a proof.</p>
+  <p class="sub">Click robots to mark them compromised, then revoke. Watch how fast it propagates fleet-wide, and that it leaves a proof.</p>
   <div class="cards">
     <div class="card"><div class="k">fleet healthy</div><div class="v"><span id="pct">100</span>%</div></div>
     <div class="card"><div class="k">compromised</div><div class="v" id="bad">0</div></div>
-    <div class="card"><div class="k">last revocation</div><div class="v" id="lat">—</div></div>
+    <div class="card"><div class="k">last revocation</div><div class="v" id="lat">-</div></div>
   </div>
   <div class="ctrls">
     <button id="revoke">Revoke compromised units</button>
@@ -73,12 +73,12 @@
     paint();
     document.getElementById('lat').textContent=latency+' ms';
     var line=document.createElement('div');
-    line.textContent=stamp()+'  REVOKE  '+ids.length+' unit(s) — credentials invalidated fleet-wide in '+latency+' ms';
+    line.textContent=stamp()+'  REVOKE  '+ids.length+' unit(s), credentials invalidated fleet-wide in '+latency+' ms';
     log.appendChild(line);log.scrollTop=log.scrollHeight;
   });
   document.getElementById('reset').addEventListener('click',function(){
     for(var i=0;i<N;i++)state[i]='ok';paint();
-    document.getElementById('lat').textContent='—';
+    document.getElementById('lat').textContent='-';
     while(log.children.length>1)log.removeChild(log.lastChild);
   });
   paint();

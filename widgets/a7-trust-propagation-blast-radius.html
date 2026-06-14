@@ -32,7 +32,7 @@
 .bp .status.done{color:var(--ink);}
 </style>
 <div class="bp">
-  <h3>Networked learning is a propagation channel — for good skills and bad</h3>
+  <h3>Networked learning is a propagation channel, for good skills and bad</h3>
   <p class="sub">A poisoned skill enters at one robot. With containment off it floods the fleet; with containment on, a signed staging bound holds it.</p>
   <div class="cards">
     <div class="card"><div class="k">robots reached</div><div class="v"><span id="n">1</span> / 64</div></div>
@@ -49,7 +49,7 @@
     </div>
   </div>
   <div class="grid" id="grid"></div>
-  <div class="status" id="status">spreading from patient zero — press play</div>
+  <div class="status" id="status">spreading from patient zero, press play</div>
 </div>
 <script>
 (function(){
@@ -86,8 +86,8 @@
     document.getElementById('ticks').textContent=ticks;
     document.getElementById('barf').style.width=pct+'%';
     var s=document.getElementById('status');
-    if(done){s.className='status done';s.textContent=contain?('contained — '+n+' of 64 reached, propagation halted at the staging bound'):('uncontained — '+n+' of 64 robots running the poisoned skill');}
-    else{s.className='status';s.textContent=contain?'containment on — bounded to a signed staging cohort':'containment off — every neighbour auto-accepts the shared skill';}
+    if(done){s.className='status done';s.textContent=contain?('contained, '+n+' of 64 reached, propagation halted at the staging bound'):('uncontained, '+n+' of 64 robots running the poisoned skill');}
+    else{s.className='status';s.textContent=contain?'containment on, bounded to a signed staging cohort':'containment off, every neighbour auto-accepts the shared skill';}
   }
   function stop(){if(timer){clearInterval(timer);timer=null;}document.getElementById('play').textContent='Play';}
   function play(){
