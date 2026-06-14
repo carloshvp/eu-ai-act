@@ -439,16 +439,16 @@ Every section above flagged at least one gap. This is expected. The Agent Govern
 ## Further reading
 
 **The law**
-- [EU AI Act — Official text (OJ L 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AL_202401689) — the primary source
-- [Article 6: Classification rules for high-risk AI systems](https://artificialintelligenceact.eu/article/6/) — annotated explainer
-- [Annex III: High-risk AI system categories](https://artificialintelligenceact.eu/annex/3/) — annotated explainer
+- [EU AI Act: Official text (OJ L 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AL_202401689): the primary source
+- [Article 6: Classification rules for high-risk AI systems](https://artificialintelligenceact.eu/article/6/): annotated explainer
+- [Annex III: High-risk AI system categories](https://artificialintelligenceact.eu/annex/3/): annotated explainer
 
 **European Commission guidance**
-- [Navigating the AI Act FAQ](https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act) — scope, high-risk classification, enforcement
-- [Implementation timeline](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act) — phased rollout through August 2027
-- [AI literacy Q&A (Article 4)](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers) — what the literacy obligation requires in practice
-- [Guidelines on transparent AI systems (Article 50)](https://digital-strategy.ec.europa.eu/en/faqs/guidelines-and-code-practice-transparent-ai-systems) — Art. 50(1) disclosure guidance
-- [Code of practice on marking AI-generated content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content) — Art. 50(2) machine-readable marking framework
+- [Navigating the AI Act FAQ](https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act): scope, high-risk classification, enforcement
+- [Implementation timeline](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act): phased rollout through August 2027
+- [AI literacy Q&A (Article 4)](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers): what the literacy obligation requires in practice
+- [Guidelines on transparent AI systems (Article 50)](https://digital-strategy.ec.europa.eu/en/faqs/guidelines-and-code-practice-transparent-ai-systems): Art. 50(1) disclosure guidance
+- [Code of practice on marking AI-generated content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content): Art. 50(2) machine-readable marking framework
 
 **Microsoft Agent Governance Toolkit**
 - [Repository](https://github.com/microsoft/agent-governance-toolkit)
@@ -457,7 +457,7 @@ Every section above flagged at least one gap. This is expected. The Agent Govern
 - [Threat model](https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/THREAT_MODEL.md)
 
 **Community resources**
-- [Awesome EU AI Act](https://genai-gurus.com/eu-ai-act) — 200+ curated resources: official sources, open source tools, templates, standards, and practical guides for EU AI Act compliance. Maintained by the [GenAI Gurus](https://genai-gurus.com) community.
+- [Awesome EU AI Act](https://genai-gurus.com/eu-ai-act): 200+ curated resources: official sources, open source tools, templates, standards, and practical guides for EU AI Act compliance. Maintained by the [GenAI Gurus](https://genai-gurus.com) community.
 
 ---
 
@@ -475,8 +475,8 @@ This is the first post in a series on practical AI governance for AI agent devel
 
 The full series lives at [governance.ai-mvp.com](https://governance.ai-mvp.com).
 
-If you found this useful, the companion resource is **[Awesome EU AI Act](https://github.com/GenAI-Gurus/awesome-eu-ai-act)** — a community-maintained list of 200+ official sources, open source tools, templates, and guides for EU AI Act compliance. A GitHub star helps other developers find it.
+If you found this useful, the companion resource is **[Awesome EU AI Act](https://github.com/GenAI-Gurus/awesome-eu-ai-act)**: a community-maintained list of 200+ official sources, open source tools, templates, and guides for EU AI Act compliance. A GitHub star helps other developers find it.
 
 ---
 
-*Written by [Carlos Hernandez](https://www.linkedin.com/in/carloshvp), founder of [GenAI Gurus](https://genai-gurus.com) — Europe's GenAI practitioner community. This post was written as a contribution to [microsoft/agent-governance-toolkit issue #849](https://github.com/microsoft/agent-governance-toolkit/issues/849). The toolkit is open source under MIT at [github.com/microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit). The example code references source files in the repository; verify import paths and package names against your installed version, as the toolkit is under active development.*
+*Written by [Carlos Hernandez](https://www.linkedin.com/in/carloshvp), founder of [GenAI Gurus](https://genai-gurus.com): Europe's GenAI practitioner community. This post was written as a contribution to [microsoft/agent-governance-toolkit issue #849](https://github.com/microsoft/agent-governance-toolkit/issues/849). The toolkit is open source under MIT at [github.com/microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit). The example code references source files in the repository; verify import paths and package names against your installed version, as the toolkit is under active development.*
