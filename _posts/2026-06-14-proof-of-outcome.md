@@ -15,6 +15,7 @@ canonical_url: "https://governance.ai-mvp.com/2026/06/14/proof-of-outcome/"
 > Continues from [The Cloud Can Prove It. The Robot Can't.](https://governance.ai-mvp.com/2026/06/11/the-cloud-can-prove-it-the-robot-cant/)
 > Interactive: this post has three widgets you can play with. They're the point, read with your hands.
 > Status: this extends AgenTrust's existing primitives (manifest, cMCP, TRACE); the specific mechanisms proposed here are design proposals for discussion, not shipped features.
+> Update (30 June): I call sensor readings "physical truth" below, and [Post 9](/2026/06/30/grading-robot-action-evidence/) walks that back: they are graded evidence that a motion was *witnessed*, not proof that the world changed as intended.
 
 ---
 
