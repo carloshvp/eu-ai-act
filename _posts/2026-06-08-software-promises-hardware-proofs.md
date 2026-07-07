@@ -260,6 +260,8 @@ Note the last row. The example can currently *prove what was authorized* but not
 
 The committed TRACE fixture is deliberately labeled `software-only`: it validates signatures, hashes and audit integrity without claiming hardware provenance, and the agent supports a `--require-hardware` flag for rehearsal on a TEE host. When the full stack is public, that flag is where "promise" turns into "proof."
 
+One honest caveat before we go further, because the next post pushes back on this one. "Hardware governance provides proofs" holds cleanly in the datacenter, where confidential-computing silicon can sign what it ran. At the robot's edge the hardware story is harder, and on integrated parts the proof may not be available at all. [Post #5](/2026/06/11/the-cloud-can-prove-it-the-robot-cant/) takes that asymmetry apart. The narrower claim is the one that survives: a hardware-anchored root moves you from *trust the operator* to *verify the claim*, wherever the silicon supports it.
+
 Why does this matter more for embodied agents than for chatbots? Because the consequences are irreversible and the questions arrive in legal form. When a robot cell does something unexpected, the people asking (the works council, the insurer, the accident investigator) are not asking whether your policy engine *probably* worked. They are asking what you can prove. For software agents, a forged audit log is a bad day for the security team. For physical agents, an unforgeable record of *which agent, which policy, which authorization, which refusal* is the difference between an incident review and a liability lottery.
 
 ## What this means under EU law
